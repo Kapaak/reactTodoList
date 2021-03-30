@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "name": "Najist se",
+      "date": "2021-03-30",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "name": "Dodelat tohle",
+      "date": "2021-03-30",
+      "completed": true,
+      "id": 2
+    }
+  ]
+}

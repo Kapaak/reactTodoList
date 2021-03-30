@@ -8,13 +8,14 @@ import ListOfTodos from "./components/ListOfTodos";
 //styles
 import { FlexContainer } from "./styles/GlobalStyles";
 
-const fetchData = async (setTodos, setError) => {
+const fetchData = async (setTodos, setError, notifyError) => {
 	try {
 		const resp = await axios.get("http://localhost:3001/todos");
 		const data = await resp.data;
 		setTodos(data);
 	} catch (err) {
 		setError(true);
+		notifyError("connection failed");
 	}
 };
 
@@ -25,7 +26,7 @@ function App() {
 	const notifyError = text => toast.error(text);
 
 	useEffect(() => {
-		fetchData(setTodos, setError);
+		fetchData(setTodos, setError, notifyError);
 	}, []);
 
 	const handleSubmit = async (name, date) => {

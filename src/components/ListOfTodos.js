@@ -4,7 +4,7 @@ import { ErrorContainer } from "../styles/GlobalStyles";
 const ListOfTodos = ({
 	todos,
 	error,
-	errorMessage = `Oops, there was a problem when connecting to database. Make sure that the json-server is running.`,
+	errorMessage = `Oops, there was a problem when connecting to the database. Make sure that the json-server is running.`,
 	handleDelete,
 	handleComplete,
 }) => {

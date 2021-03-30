@@ -1,16 +1,17 @@
 import Todo from "./Todo";
+import { ErrorContainer } from "../styles/GlobalStyles";
 
 const ListOfTodos = ({
 	todos,
 	error,
-	errorMessage = "Oops, there was a problem when connecting to database. Try it again by reloading the page please.",
+	errorMessage = `Oops, there was a problem when connecting to database. Make sure that the json-server is running.`,
 	handleDelete,
 	handleComplete,
 }) => {
 	return (
 		<>
 			{error ? (
-				<div style={{ color: "white" }}>{errorMessage}</div>
+				<ErrorContainer>{errorMessage}</ErrorContainer>
 			) : (
 				<ul>
 					{todos.map((todo, index) => {

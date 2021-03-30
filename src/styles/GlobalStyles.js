@@ -130,3 +130,15 @@ export const FlexContainer = styled.div`
 		}
 	}
 `;
+
+export const ErrorContainer = styled.div`
+	color: white;
+	position: absolute;
+	max-width: 60rem;
+	background: black;
+	padding: 4rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+`;

@@ -88,7 +88,6 @@ function App() {
 				<ListOfTodos
 					todos={todos}
 					error={error}
-					errorMessage={"damn you internet connection !!"}
 					handleDelete={handleDelete}
 					handleComplete={handleComplete}
 				/>

@@ -3,14 +3,14 @@ import Todo from "./Todo";
 const ListOfTodos = ({
 	todos,
 	error,
-	errorMessage = "Oops, there was a problem when connecting to database",
+	errorMessage = "Oops, there was a problem when connecting to database. Try it again by reloading the page please.",
 	handleDelete,
 	handleComplete,
 }) => {
 	return (
 		<>
 			{error ? (
-				<div>{errorMessage}</div>
+				<div style={{ color: "white" }}>{errorMessage}</div>
 			) : (
 				<ul>
 					{todos.map((todo, index) => {
